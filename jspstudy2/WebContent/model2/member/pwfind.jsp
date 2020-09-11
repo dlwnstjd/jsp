@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>비밀번호찾기</title>
+<link rel="stylesheet" href="../../css/main.css">
+<script type="text/javascript">
+	function inputcheck(f){
+		if(f.email.value==''){
+			alert("이메일를 입력하세요.");
+			return false;
+		}
+		if(f.tel.value==''){
+			alert("전화번호를 입력하세요.");
+			return false;
+		}
+		if(f.id.value==''){
+			alert("아이디를 입력하세요.");
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+<form action="pwfind2.me" method="post" name="f" onsubmit="return inputcheck(this)">
+<table>
+	<tr><th>아이디</th><td><input type="text" name="id"></td></tr>
+	<tr><th>이메일</th><td><input type="text" name="email"></td></tr>
+	<tr><th>전화번호</th><td><input type="text" name="tel"></td></tr>
+	<tr><td colspan ="2">
+		<input type="submit" value="비밀번호찾기"></td></tr>
+</table>
+</form>
+</body>
+</html>
